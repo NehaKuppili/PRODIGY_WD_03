@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #FFF7ED,
+        #FFE4E6
+    );
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+h1 {
+    color: #845EF7;
+    margin-bottom: 15px;
+}
+
+#status {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    color: #444;
+
+    margin-bottom: 25px;
+}
+
+.board {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.cell {
+    height: 100px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #F8F9FA;
+
+    font-size: 2.5rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.cell:hover {
+    background: #FFD93D;
+
+    transform: scale(1.05);
+}
+
+.x {
+    color: #FF6B6B;
+}
+
+.o {
+    color: #4D96FF;
+}
+
+.win {
+    background: #6BCB77 !important;
+
+    color: white;
+}
+
+.scoreboard {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.score-card {
+    flex: 1;
+
+    background: #F8F9FA;
+
+    padding: 15px;
+
+    border-radius: 15px;
+}
+
+.score-card h3 {
+    margin-bottom: 8px;
+
+    color: #555;
+}
+
+.score-card span {
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #845EF7;
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 500px) {
+
+    .cell {
+        height: 80px;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
