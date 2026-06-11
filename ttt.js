@@ -1,7 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.getElementById("status");
 
-const newGameBtn = document.getElementById("e");
+const newGameBtn = document.getElementById("new-game");
 const resetScoreBtn = document.getElementById("reset-score");
 
 const xScoreDisplay = document.getElementById("x-score");
